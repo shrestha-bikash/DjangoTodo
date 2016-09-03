@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo list | {% block title %}{% endblock %}</title>
+    {% load staticfiles %}
+
+      <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link rel="stylesheet" href="{% static "build/css/bootstrap.css" %}">
+    <!-- FONT AWESOME CSS -->
+    <link rel="stylesheet" href="{% static "build/css/font-awesome.min.css" %}">
+
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {% block header %}{% endblock %}
+    <div class = "container">
+      {% block content %}{% endblock %}
+    </div>
+
+    <!--  Jquery Core Script -->
+    <script src={% static "build/js/jquery-1.10.2.js" %}></script>
+    <!--  Core Bootstrap Script -->
+    <script src={% static "build/js/bootstrap.js" %}></script>
+    <!-- Core React script -->
+    <script src={% static "build/js/react.min.js" %}></script>
+    <!-- Core React-DOM script -->
+    <script src={% static "build/js/react-dom.min.js" %}></script>
+    <!-- Core JSXtransformer script -->
+    <script src={% static "build/js/JSXTransformer.js" %}></script>
+    <!-- Custom JSXtransformer script -->
+    <script type="text/jsx" src={% static "build/js/customReact.jsx" %}></script>
+
+
+</body>
+</html>
